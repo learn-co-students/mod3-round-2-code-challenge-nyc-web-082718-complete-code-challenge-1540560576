@@ -45,6 +45,7 @@ function displayOnShowingsDiv(showingObj){
 
 
   buyButton.addEventListener('click', event  => {
+    remainingTickets-=1
     if ( ((showingObj.capacity - showingObj.tickets_sold)) === 0) {
       buyButton.remove()
     } else {
@@ -54,6 +55,8 @@ function displayOnShowingsDiv(showingObj){
 
 
   function buyTicket(showingObj){
+
+
 
     fetch('https://evening-plateau-54365.herokuapp.com/tickets', {
       method: 'POST',
@@ -65,8 +68,7 @@ function displayOnShowingsDiv(showingObj){
         showing_id: showingObj.id
       })
     }).then(response => response.json())
-      .then(json => fetchMovieShowings(json))
-
+      .then(json => fetchMovieShowings())
   }
 
 }
