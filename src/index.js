@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //DID NOT FINISH
 
-//i would fix the labels of the tickest remaining and time
+//i would fix the positions of the tickest remaining and time
+//was working on buyButton addEventListener
+
 //i would add an addEventListener on the buyButton where on click, would grab the ticket remaining innertext and replace with what is subtracted by one (optimistic rendering)
 //make a patch request then make a get request
 //make an if statement of if the remaining ticket reaches 0, remove the button and replace to 'Sold Out'
